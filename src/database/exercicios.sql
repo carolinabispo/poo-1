@@ -1,13 +1,12 @@
--- Active: 1698111129265@@127.0.0.1@3306
-
-
-
+-- Active: 1698283375403@@127.0.0.1@3306
 CREATE TABLE videos (
     id TEXT PRIMARY KEY UNIQUE NOT NULL,
     titulo TEXT NOT NULL,
     duracao REAL NOT NULL,
     data_update DATETIME DEFAULT (strftime('%Y-%m-%d %H:%M:%S', 'now', 'localtime'))
 )
+
+DROP TABLE videos
 
 INSERT INTO videos (id, titulo, duracao)
 VALUES
